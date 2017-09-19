@@ -15,9 +15,9 @@ Just type in the Package Manage Console
 Install-Package Moosend.Wrappers.CSharpWrapper
 ```
 
-OR
+*OR*
 
-Download it directly from the NuGet Package Manager
+Download it directly from the `NuGet Package Manager`
 
 Then use the namespaces:
 
