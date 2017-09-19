@@ -19,8 +19,6 @@ Install-Package Moosend.Wrappers.CSharpWrapper
 
 Download it directly from the `NuGet Package Manager`
 
-Then use the namespaces:
-
 <a name="getting-started"></a>
 ## Getting Started
 
