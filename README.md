@@ -1,40 +1,25 @@
 # Moosend C# Wrapper for Moosend v3 REST API
 
-TODO: Add a description
+The following project is a C# implementation of the Moosend V3 API.
+You can find the API documentation at http://docs.moosendapp.apiary.io/#
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
 - .NET 4.0 or later
-- Windows Phone 7.1 (Mango)
-
-<a name="dependencies"></a>
-## Dependencies
-
 
 <a name="installation"></a>
 ## Installation
-Run the following command to generate the DLL
-- [Mac/Linux] `/bin/sh build.sh`
-- [Windows] `build.bat`
 
-Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
-```csharp
-using Moosend.Wrappers.CSharpWrapper.Api;
-using Moosend.Wrappers.CSharpWrapper.Client;
-using Moosend.Wrappers.CSharpWrapper.Model;
+Just type in the Package Manage Console
 ```
-<a name="packaging"></a>
-## Packaging
-
-A `.nuspec` is included with the project. You can follow the Nuget quickstart to [create](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package#create-the-package) and [publish](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package#publish-the-package) packages.
-
-This `.nuspec` uses placeholders from the `.csproj`, so build the `.csproj` directly:
-
-```
-nuget pack -Build -OutputDirectory out Moosend.Wrappers.CSharpWrapper.csproj
+Install-Package Moosend.Wrappers.CSharpWrapper
 ```
 
-Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
+OR
+
+Download it directly from the NuGet Package Manager
+
+Then use the namespaces:
 
 <a name="getting-started"></a>
 ## Getting Started
@@ -48,27 +33,25 @@ using Moosend.Wrappers.CSharpWrapper.Model;
 
 namespace Example
 {
-    public class Example
+    public class CreatingADraftCampaignExample
     {
         public void main()
         {
-
             var apiInstance = new CampaignsApi();
             var format = format_example;  // string | 
             var apikey = apikey_example;  // string | You may find your API Key or generate a new one in your account settings.
-            var campaignID = campaignID_example;  // string | The ID of the requested AB test campaign
+            var body = new CreatingADraftCampaignRequest(); // CreatingADraftCampaignRequest | 
 
             try
             {
-                // AB Test Campaign Summary
-                AbTestCampaignSummaryResponse result = apiInstance.ABTestCampaignSummary(format, apikey, campaignID);
+                // Creating A Draft Campaign
+                CreatingADraftCampaignResponse result = apiInstance.CreatingADraftCampaign(format, apikey, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CampaignsApi.ABTestCampaignSummary: " + e.Message );
+                Debug.Print("Exception when calling CampaignsApi.CreatingADraftCampaign: " + e.Message );
             }
-
         }
     }
 }
@@ -77,7 +60,6 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.moosend.com/v3*
 ## *CampaignsApi*
 Class | Method 
 ------------ | ------------- 
